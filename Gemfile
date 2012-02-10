@@ -15,6 +15,12 @@ gem   'dm-serializer',      '~>1.2.0'
 # JSON
 gem   'json',               '~>1.6.5'
 
+group :development  do
+  gem 'cucumber',           '~>1.1.4'
+  gem 'cucumber-sinatra',   '0.4.0'
+  gem 'capybara',           '~>1.1.2'
+end
+
 
 
 
