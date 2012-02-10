@@ -5,12 +5,12 @@ Feature: User Subscription
   
   Scenario: Valid email address
     Given I am on the homepage
-    When I fill in "email" with "djlumley@gmail.com"
+    When I fill in "email" with "testemail@testemail.com"
     When I press "submit"
     Then I should see "Thanks for subscribing"
   
   Scenario: Invalid email address
     Given I am on the homepage
-    When I fill in "email" with "djlumley"
+    When I fill in "email" with "testemail"
     When I press "submit"
-    Then I should see "Your email address was invalid"
+    Then I should see "testemail is an invalid email address"

@@ -13,6 +13,12 @@ module NavigationHelpers
     when /the home\s?page/
       '/'
 
+    when /a valid unsubscribe URL/
+      '/updates/unsubscribe/testemail@testemail.com'
+    
+    when /an invalid unsubscribe URL/
+      '/updates/unsubscribe/testemail'
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

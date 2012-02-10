@@ -1,0 +1,78 @@
+html, body {
+	margin:		0;
+	padding:	0;
+	
+	font-family:	@body_font;
+	font-size:		@body_font_size;
+	color:			@shade_2;
+	line-height:	1.5em;
+}
+
+header, section#teaser {
+	display:			block;
+	width:				@teaser_width;
+	margin:				0 auto;
+}
+
+header {
+	margin-top:			@margin * 6;
+	h1 {
+		font-size:		@h1_font_size;
+		line-height:	@h1_font_size;
+		margin:			0;
+		padding:		0;
+	}
+}
+
+section#teaser {
+	margin-top:			@margin * 3;
+	p {
+		font-size:		@h2_font_size;
+		line-height:	1.5em;
+		
+		margin:			0;
+		padding:		0;
+	}
+	
+	form {
+		margin-top:			@margin * 3;
+		overflow:			auto;
+		
+		label {
+			display:		block;
+			width:			0;
+			height:			0;
+			overflow:		hidden;
+			text-indent:	-9999em;
+		}
+		
+		input {
+			display:		block;
+			float:			left;
+			
+			padding:		@margin @margin;
+			
+			font-family:	@body_font;
+			font-size:		@body_font_size;
+			line-height:	@body_font_size;
+			
+			background:		none;
+			border:			none;
+			outline:		none;
+
+		}
+		
+		input[type=email] {
+			width:			@input_width;
+			margin-right:	@margin;
+			border-bottom:	2px solid @shade_15;
+			background:		@shade_17;
+		}
+		
+		input[type=submit] {
+			width:			@submit_width;
+			color:			@shade_17;
+			background:		@shade_3;
+		}
+	}
+}

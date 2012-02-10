@@ -1,0 +1,107 @@
+.text-shadow(
+	@left:			0px,
+	@top:			1px,
+	@blur:			1px,
+	@color:			fade(@shade_2, 50%)
+){
+	text-shadow:	@arguments;
+}
+
+.deboss-text-shadow(
+	@left:			0px,
+	@top:			-1px,
+	@blur:			1px,
+	@color:			fade(@shade_2, 50%)
+){
+	text-shadow:	@arguments;
+}
+
+.box-shadow(
+	@left:		0,
+	@top:		1px,
+	@blur:		1px,
+	@color:		fade(@shade_2, 50%)
+){
+	-webkit-box-shadow:	@arguments;
+	-moz-box-shadow:	@arguments;
+	-ms-box-shadow:		@arguments;
+	-o-box-shadow:		@arguments;
+    box-shadow:			@arguments;
+}
+.inset-box-shadow(
+	@left:		0,
+	@top:		0,
+	@blur:		4px,
+	@color:		fade(@shade_2, 50%)
+){
+	-webkit-box-shadow:	inset @arguments;
+	-moz-box-shadow:	inset @arguments;
+	-ms-box-shadow:		inset @arguments;
+	-o-box-shadow:		inset @arguments;
+    box-shadow:			inset @arguments;
+}
+
+.punch-box-shadow(
+	@highlight:		fade(@shade_17, 50%),
+	@shadow:		@cyan_1,
+	@height:		4px
+){
+	                                     
+	-webkit-box-shadow:	inset 0 1px 10px 1px @highlight, 0px 1px 0 @shadow, 0 @height 0px @shade_3, 0 (@height + 2px) 4px 1px @shade_1;
+	-moz-box-shadow:	inset 0 1px 10px 1px @highlight, 0px 1px 0 @shadow, 0 @height 0px @shade_3, 0 (@height + 2px) 4px 1px @shade_1;
+	-ms-box-shadow:		inset 0 1px 10px 1px @highlight, 0px 1px 0 @shadow, 0 @height 0px @shade_3, 0 (@height + 2px) 4px 1px @shade_1;
+	-o-box-shadow:		inset 0 1px 10px 1px @highlight, 0px 1px 0 @shadow, 0 @height 0px @shade_3, 0 (@height + 2px) 4px 1px @shade_1;
+	box-shadow:			inset 0 1px 10px 1px @highlight, 0px 1px 0 @shadow, 0 @height 0px @shade_3, 0 (@height + 2px) 4px 1px @shade_1;
+}
+
+.border-radius(
+	@radius:					@border_radius
+){
+	-webkit-border-radius:		@radius;
+	-moz-border-radius:			@radius;
+	border-radius:				@radius;
+	-moz-background-clip:		padding;
+	-webkit-background-clip:	padding-box;
+	background-clip:			padding-box;
+}
+
+.border-emboss(
+	@shadow:			@shade_5,
+	@highlight:			@shade_14
+){
+	border-top:			1px solid @highlight;
+	border-bottom:		1px solid @shadow;
+}
+
+.border-deboss(
+	@shadow:			@shade_5,
+	@highlight:			@shade_14
+){
+	border-top:			1px solid @shadow;
+	border-bottom:		1px solid @highlight;
+}
+
+.linear-gradient(
+	@gradient_start:	@shade_14,
+	@gradient_finish:	@shade_9
+){
+	background-image:	-webkit-gradient(linear, left top, left bottom, from(@gradient_start), to(@gradient_finish));
+	background-image:	-webkit-linear-gradient(top, @gradient_start, @gradient_finish);
+	background-image:	-moz-linear-gradient(top, @gradient_start, @gradient_finish);
+	background-image:	-ms-linear-gradient(top, @gradient_start, @gradient_finish);
+	background-image:	-o-linear-gradient(top, @gradient_start, @gradient_finish);
+	background-image:   linear-gradient(top, @gradient_start, @gradient_finish);
+}
+
+.transition(
+	@target:				all,
+	@duration:				@transition_duration,
+	@easing:				@transition_easing
+)
+{
+	-webkit-transition:		@arguments;
+	-moz-transition:		@arguments;
+	-ms-transition:			@arguments;
+	-o-transition:			@arguments;
+	transition:				@arguments;
+}
