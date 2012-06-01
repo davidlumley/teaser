@@ -18,6 +18,6 @@ require   'json'
 
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/development.db")
 
-require 'app/models/user'
+require File.dirname(__FILE__) + '/models/user'
 
 DataMapper.finalize.auto_upgrade!

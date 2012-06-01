@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'sinatra'
-require 'app/app.rb'
+require File.dirname(__FILE__) + '/app/app.rb'
 
 use Rack::MethodOverride
 
-run Teaser::App.new
+run Teaser::App

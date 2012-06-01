@@ -1,4 +1,4 @@
-require 'app/library'
+require File.dirname(__FILE__) + '/library'
 
 module  Teaser
   class App < Sinatra::Base
